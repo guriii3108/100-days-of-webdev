@@ -4,6 +4,9 @@ Welcome to my **#100DaysOfWebDev** journey!
 This repository contains my daily progress, code, and notes as I learn and build projects in **HTML, CSS, JavaScript, React, and backend**.  
 
 ---
+## 📝Notion Notes
+- [Notion Notes](https://www.notion.so/100-Days-of-Web-Development-278f1e5ce8868039a303e3949bc860ef?source=copy_link)
+---
 
 ## 📅 Structure  
 
@@ -25,7 +28,7 @@ This repository contains my daily progress, code, and notes as I learn and build
 
 | Day | Topics Covered | Links |
 |-----|----------------|-------|
-| 01  | HTML Basics (Headings, paragraphs, links, images) | [Code](./Day-01) • [Notes](#https://www.notion.so/Day-01-HTML-Basics-278f1e5ce886804a9a5ae8828c4083a7?source=copy_link) |
+| 01  | HTML Basics (Headings, paragraphs, links, images) | [Code](./Day-01)|
 | 02  | Coming soon… | - |
 
 ---
