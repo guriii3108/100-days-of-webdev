@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+</head>
+<body>
+
+  <!-- Used all the tags which i learned .. used for Form -->
+  <h1>Registration Form</h1>
+  <form action="" method="POST"></form>
+
+    <!-- Name -->
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Your name"><br><br>
+
+    <!-- Email -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Your email"><br><br>
+
+    <!-- Password -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <!-- Gender -->
+    <p>Gender:</p>
+    <label><input type="radio" name="gender" value="male">Male</label>
+    <label><input type="radio" name="gender" value="female">Female</label><br><br>
+
+    <!-- Skills -->
+    <p>Skills:</p>
+    <label><input type="checkbox" name="skills" value="html">HTML</label>
+    <label><input type="checkbox" name="skills" value="css">CSS</label>
+    <label><input type="checkbox" name="skills" value="js">JavaScript</label><br><br>
+
+    <!-- Country -->
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select><br><br>
+
+    <!-- Message -->
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+
+    <!-- Submit -->
+    <input type="submit" value="Register">
+
+  </form>
+</body>
+</html>
