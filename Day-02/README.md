@@ -12,7 +12,7 @@
 
 👉 [View Code](./index.html)  
 
-## 📝 Notes  
+## 📝 Notes 
 - Always label form inputs using `<label>` for accessibility  
 - Use `<thead>`, `<tbody>`, `<tfoot>` for semantic tables  
 - Buttons inside forms default to `type="submit"`  
