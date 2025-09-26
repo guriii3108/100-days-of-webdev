@@ -26,7 +26,7 @@
 
 ## 📸 Output Snapshot
 Here’s how my **Day-03 HTML Table & Semantic Layout** looks:
-📸 [Snapshot](https://github.com/guriii3108/100-days-of-webdev/blob/7297ac73fed0c2ef86956588c5eb3102371c38f7/Day-03/Day3.png?raw=true)
+<img src="https://github.com/guriii3108/100-days-of-webdev/blob/main/Day-03/Day3.png?raw=true" alt="Day-03 Snapshot" width="600">
 
 ---
 ✨ Building stronger HTML foundations each day! 🚀
