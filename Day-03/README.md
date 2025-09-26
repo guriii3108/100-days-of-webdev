@@ -24,7 +24,7 @@
 
 📒 [Notion Notes](#) *(https://www.notion.so/Day-03-Tables-Semantic-HTML-279f1e5ce886804b98c5c79132c5b145?source=copy_link)*  
 
-📸 ![Snapshot] (./Day3.png)
+📸 [Snapshot](./Day3.png)
 
 ---
 ✨ Building stronger HTML foundations each day! 🚀
