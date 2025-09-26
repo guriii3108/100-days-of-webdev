@@ -24,7 +24,9 @@
 
 📒 [Notion Notes](#) *(https://www.notion.so/Day-03-Tables-Semantic-HTML-279f1e5ce886804b98c5c79132c5b145?source=copy_link)*  
 
-📸 [Snapshot](./Day3.png)
+## 📸 Output Snapshot
+Here’s how my **Day-03 HTML Table & Semantic Layout** looks:
+📸 [Snapshot](https://github.com/guriii3108/100-days-of-webdev/blob/7297ac73fed0c2ef86956588c5eb3102371c38f7/Day-03/Day3.png?raw=true)
 
 ---
 ✨ Building stronger HTML foundations each day! 🚀
