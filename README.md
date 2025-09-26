@@ -29,8 +29,8 @@ This repository contains my daily progress, code, and notes as I learn and build
 | Day | Topics Covered | Links |
 |-----|----------------|-------|
 | 01  | HTML Basics (Headings, paragraphs, links, images) | [Code](./Day-01)|
-| 02  | Coming soon… | - |
-
+| 02  | HTML Forms & Input Elements | [Code](./Day-02) |
+| 03  | HTML Tables & Semantic TagS | [Code](./Day-03) |
 ---
 
 ## 🛠️ Tech Stack  
