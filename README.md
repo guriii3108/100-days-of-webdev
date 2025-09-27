@@ -31,7 +31,8 @@ This repository contains my daily progress, code, and notes as I learn and build
 | 01  | HTML Basics (Headings, paragraphs, links, images) | [Code](./Day-01)|
 | 02  | HTML Forms & Input Elements | [Code](./Day-02) |
 | 03  | HTML Tables & Semantic TagS | [Code](./Day-03) |
-| 04 ||
+| 04 | Accessibility basics (alt text, ARIA)| [Code](./Day-04) |
+| - | MINI-PROJECT- Resume Page(Day01-Day-04) | [Code](./Day-04) |
 | 05 ||
 | 06 ||
 | 07 ||
