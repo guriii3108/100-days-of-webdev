@@ -1,0 +1,141 @@
+/* ===== Reset some default spacing ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Global Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  margin: 0 10px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* pseudo-class hover */
+nav a:hover {
+  color: #0077cc;
+}
+
+/* pseudo-element underline effect */
+nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #0077cc;
+  transition: width 0.3s;
+  margin: auto;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== Sections ===== */
+section {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 80%;
+  max-width: 800px;
+}
+
+
+section h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #0077cc;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #0077cc;
+  color: white;
+}
+
+/* ===== Skills List ===== */
+#skills ul {
+  list-style: square inside;
+}
+
+#skills li {
+  margin: 5px 0;
+}
+
+/* highlight on hover */
+#skills li:hover {
+  color: #0077cc;
+  cursor: pointer;
+}
+
+/* ===== Projects ===== */
+article {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 4px solid #0077cc;
+  background: #f1faff;
+}
+
+/* ===== Aside (Contact) ===== */
+aside {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 80%;
+  max-width: 800px;
+}
+
+aside a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #555;
+}
