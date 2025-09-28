@@ -40,10 +40,12 @@ This project is part of my **#100DaysOfWebDevelopment** challenge. On Day 05, I 
 ## 📸 Output Snapshot
 Here’s how my **Day-05 Mini Project** looks:
 Before CSS:
-<img src="" alt="Day-03 Snapshot" width="600">
+
+<img src="https://github.com/guriii3108/100-days-of-webdev/blob/main/Day-05/beforeCSS.png?raw=true" alt="Day-05 Snapshot" width="600">
 
 After CSS:
-<img src="" alt="Day-03 Snapshot" width="600">
+
+<img src="https://github.com/guriii3108/100-days-of-webdev/blob/main/Day-05/afterCSS.png?raw=true" alt="Day-03 Snapshot" width="600">
 
 ---
 ✨ Progress: Day 02/100 – Continuing my #100DaysOfWebDev journey!
