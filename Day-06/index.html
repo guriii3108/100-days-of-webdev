@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 6 - Flexbox + Pseudo-classes (Enhanced)</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #1a1a1a;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #ffcc00;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 3px;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover underline with ::after */
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: #ffcc00;
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    nav ul li:nth-child(2) a {
+      color: #ffcc00; /* active link */
+      font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem;
+      min-height: 90vh;
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    }
+
+    .hero-text {
+      flex: 1;
+      padding: 1rem 2rem;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1.2rem;
+      color: #222;
+    }
+
+    .hero-text p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 600px;
+    }
+
+    .hero-text button {
+      padding: 0.9rem 2rem;
+      background: #ffcc00;
+      color: #222;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .hero-text button:hover {
+      background: #ffda3d;
+      transform: translateY(-3px);
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .hero-image img {
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero-text {
+        padding: 2rem 1rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">MySite</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to My Portfolio</h1>
+      <p>
+        This modern hero section is built with Flexbox and styled using pseudo-classes & pseudo-elements.
+        Resize the screen to check responsiveness, and hover on links & image for effects.
+      </p>
+      <button>Explore More</button>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg" alt="Hero Image">
+    </div>
+  </section>
+
+</body>
+</html>
