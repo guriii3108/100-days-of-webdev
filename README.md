@@ -33,11 +33,11 @@ This repository contains my daily progress, code, and notes as I learn and build
 | 03  | HTML Tables & Semantic TagS | [Code](./Day-03) |
 | 04 | Accessibility basics (alt text, ARIA)| [Code](./Day-04) |
 | - | MINI-PROJECT- Resume Page(Day01-Day-04) | [Code](./Day-04) |
-| 05 ||
-| 06 ||
-| 07 ||
-| 08 ||
-| 09 |
+| 05 |CSS Basics & Fundamentals|[Code](./Day-05)|
+| 06 | Flexbox Mastery + Pseudo-classes|[Code](./Day-06)|
+| 07 |Grid Layouts + Pseudo-elements|[Code](./Day-07)|
+| 08 |||
+| 09 |||
 ---
 
 ## 🛠️ Tech Stack  
