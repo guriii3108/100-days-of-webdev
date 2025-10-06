@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header - Fixed */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Audi Logo */
+.audi-rings {
+    display: flex;
+    gap: -10px;
+}
+
+.ring {
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -10px;
+}
+
+.ring:first-child {
+    margin-left: 0;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff0000;
+}
+
+/* Search Icon */
+.search-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Navigation Dots*/
+.nav-dots {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    background: transparent;
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.3);
+}
+
+/* Scroll Container */
+.scroll-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+/* Individual Slides */
+.slide {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Slide Backgrounds */
+.slide-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+
+.slide-bg-1 {
+    background: 
+        linear-gradient(to right, rgba(139, 0, 0, 0.5) 0%, rgba(139, 0, 0, 0.2) 40%, rgba(200, 200, 200, 0.3) 100%),
+        url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1600') center/cover;
+}
+
+
+.slide-bg-2 {
+    background: 
+        linear-gradient(to right, rgba(0, 50, 100, 0.5) 0%, rgba(0, 50, 100, 0.2) 40%, rgba(150, 150, 200, 0.3) 100%),
+        url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=1600') center/cover;
+}
+
+
+.slide-bg-3 {
+    background: 
+        linear-gradient(to right, rgba(80, 80, 80, 0.5) 0%, rgba(80, 80, 80, 0.2) 40%, rgba(200, 180, 150, 0.3) 100%),
+        url('https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=1600') center/cover;
+}
+
+/* Slide Content */
+.slide-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    padding: 20px;
+}
+
+/* Side Text */
+.side-text {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 80px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.15);
+    letter-spacing: 10px;
+    animation: fadeInLeft 1s ease-out;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: left;
+    position: relative;
+    margin-left: -200px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.main-title {
+    font-size: 120px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 15px;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    animation: slideInRight 1s ease-out;
+}
+
+.description {
+    color: white;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 500;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.description p {
+    margin: 5px 0;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+}
+
+.scroll-circle {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.scroll-circle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .main-title {
+        font-size: 80px;
+        letter-spacing: 10px;
+    }
+    
+    .side-text {
+        font-size: 60px;
+        left: 20px;
+    }
+    
+    .hero-section {
+        margin-left: -100px;
+    }
+    
+    .nav {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 11px;
+    }
+    
+    .header {
+        padding: 15px 30px;
+    }
+    
+    .nav-dots {
+        right: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        font-size: 10px;
+    }
+    
+    .main-title {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+    
+    .side-text {
+        font-size: 40px;
+        left: 10px;
+    }
+    
+    .hero-section {
+        margin-left: 0;
+        padding-left: 60px;
+    }
+    
+    .description {
+        font-size: 12px;
+    }
+    
+    .nav-dots {
+        right: 20px;
+        gap: 15px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .scroll-indicator {
+        bottom: -100px;
+    }
+    
+    .scroll-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .ring {
+        width: 20px;
+        height: 20px;
+        border: 2px solid white;
+        margin-left: -8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+    
+    .side-text {
+        font-size: 30px;
+    }
+    
+    .description {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+    
+    .nav-link {
+        font-size: 9px;
+    }
+    
+    .hero-section {
+        padding-left: 50px;
+    }
+    
+    .nav-dots {
+        right: 10px;
+    }
+}
+
+/* Custom Scrollbar */
+.scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
