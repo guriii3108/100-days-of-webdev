@@ -1,0 +1,672 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    /* max-width: 1200px; */
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #0d0d0d;
+    border: 1px solid #333;
+    border-radius: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #6366f1;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Hero Section */
+.hero {
+    margin-bottom: 60px;
+}
+
+.hero-image {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                #333;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #555 0%, transparent 70%);
+    border-radius: 50%;
+    top: 20%;
+    left: 15%;
+    opacity: 0.3;
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #666 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 20%;
+    opacity: 0.3;
+}
+
+.hero-title {
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+}
+
+/* Booking Form */
+.booking-form {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    align-items: end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #6366f1;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* Apollo Section */
+.apollo-section {
+    margin: 80px 0;
+}
+
+.apollo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.apollo-text {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.small-text {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.apollo-text h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.description {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn-secondary {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #4f46e5;
+}
+
+/* Moon with markers */
+.apollo-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moon {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle at 35% 35%, #888, #666, #444, #222);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: inset -20px -20px 40px rgba(0,0,0,0.5),
+                0 0 40px rgba(255,255,255,0.1);
+}
+
+/* Moon craters effect */
+.moon::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #555 0%, #333 100%);
+    border-radius: 50%;
+    top: 30%;
+    left: 40%;
+    box-shadow: inset 3px 3px 10px rgba(0,0,0,0.5);
+}
+
+.moon::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #4a4a4a 0%, #2a2a2a 100%);
+    border-radius: 50%;
+    top: 50%;
+    left: 55%;
+    box-shadow: inset 3px 3px 10px rgba(0,0,0,0.5);
+}
+
+.apollo-marker {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    white-space: nowrap;
+}
+
+.marker-1 { top: 15%; left: 50%; transform: translateX(-50%); }
+.marker-2 { top: 30%; right: 10%; }
+.marker-3 { top: 50%; right: 5%; }
+.marker-4 { bottom: 30%; right: 15%; }
+.marker-5 { bottom: 25%; left: 25%; }
+.marker-6 { bottom: 40%; left: 10%; }
+
+/* Why Section */
+.why-section {
+    margin: 80px 0;
+}
+
+.why-section h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.reasons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.reason-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.reason-btn:hover {
+    border-color: #6366f1;
+    transform: translateY(-2px);
+}
+
+.btn-highlighted {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    border: none;
+}
+
+/* Cards Section */
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 80px 0;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.card-purple {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+.card-dark {
+    background-color: #1a1a1a;
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* UFO Design */
+.ufo-image {
+    background-color: rgba(99, 102, 241, 0.2);
+    position: relative;
+}
+
+.ufo-image::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(to bottom, #ddd, #999);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.ufo-image::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    background: linear-gradient(to bottom, #eee, #bbb);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Capsule Design */
+.capsule-image {
+    background-color: rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.capsule-image::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    background: linear-gradient(135deg, #f0f0f0, #aaa);
+    border-radius: 50% 50% 20% 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.capsule-image::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #4f46e5, #6366f1);
+    border-radius: 50%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Museum/Lander Design */
+.museum-image {
+    background-color: rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.museum-image::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to bottom, #ccc, #888);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(50% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.museum-image::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background: #999;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-card {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.btn-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+/* Footer */
+.footer {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.footer-left p {
+    font-size: 12px;
+    color: #888;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    border-color: #6366f1;
+    background-color: #6366f1;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 968px) {
+    .container {
+        padding: 30px;
+    }
+    
+    .nav {
+        gap: 15px;
+    }
+    
+    .nav a {
+        font-size: 12px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .apollo-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .moon {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .why-section h2,
+    .apollo-text h2 {
+        font-size: 32px;
+    }
+    
+    .cards-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .user-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+        padding: 0 20px;
+    }
+    
+    .hero-image {
+        padding: 60px 20px;
+        min-height: 200px;
+    }
+    
+    .booking-form {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .apollo-text {
+        padding: 25px;
+    }
+    
+    .apollo-text h2 {
+        font-size: 28px;
+    }
+    
+    .moon {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .apollo-marker {
+        font-size: 9px;
+        padding: 3px 8px;
+    }
+    
+    .why-section h2 {
+        font-size: 28px;
+    }
+    
+    .reason-btn {
+        font-size: 12px;
+        padding: 10px 18px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .card-image {
+        height: 150px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    .moon {
+        width: 200px;
+        height: 200px;
+    }
+}
