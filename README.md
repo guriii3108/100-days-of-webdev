@@ -38,6 +38,16 @@ This repository contains my daily progress, code, and notes as I learn and build
 | 07 |Grid Layouts + Pseudo-elements|[Code](./Day-07)|
 | 08 |||
 | 09 |||
+| 10 |||
+| 11 |||
+| 12 |||
+| 13 |||
+| 14 |||
+| 15 |||
+| 16 |||
+| 17 |||
+| 18 |||
+| 19 |||
 ---
 
 ## 🛠️ Tech Stack  
