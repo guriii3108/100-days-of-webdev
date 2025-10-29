@@ -1,0 +1,15 @@
+<div class="h-screen w-full bg-black">
+            <div class="h-screen w-full text-black bg-zinc-500 flex justify-center items-center" id="page1">
+                  <div id="box" class="h-60 w-60 bg-blue-500"></div>
+            </div>
+            <div class="h-screen text-6xl w-full text-white bg-black flex flex-col gap-20 justify-center items-center" id="page2">
+                  <!-- <h1 class="bg-red-500">Gurveer Singh</h1>
+                  <h2 class="bg-yellow-500">I am Guriiiiii</h2> -->
+                  <div id="box" class="h-60 w-60 bg-blue-500"></div>
+
+            </div>
+            <div class="h-screen w-full text-black bg-stone-600 flex justify-center items-center" id="page3">
+                  <div id="box" class="h-60 w-60 bg-blue-500"></div>
+            </div>
+</div>
+
