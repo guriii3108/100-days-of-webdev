@@ -36,12 +36,12 @@ This repository contains my daily progress, code, and notes as I learn and build
 | 05 |CSS Basics & Fundamentals|[Code](./Day-05)|
 | 06 | Flexbox Mastery + Pseudo-classes|[Code](./Day-06)|
 | 07 |Grid Layouts + Pseudo-elements|[Code](./Day-07)|
-| 08 |||
-| 09 |||
-| 10 |||
-| 11 |||
-| 12 |||
-| 13 |||
+| 08 ||[Code](./Day-08)|
+| 09 ||[Code](./Day-09)|
+| 10 ||[Code](./Day-10)|
+| 11 ||[Code](./Day-11)|
+| 12 ||[Code](./Day-12)|
+| 13 ||[Code](./Day-13)|
 | 14 |||
 | 15 |||
 | 16 |||
