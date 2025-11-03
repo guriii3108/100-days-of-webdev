@@ -9,7 +9,6 @@
 - Explored project structure and dev commands
 - Created my first component
 - Practiced JSX rules and expressions
-
 ---
 
 ### Setup (Vite)
