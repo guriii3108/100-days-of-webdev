@@ -103,8 +103,8 @@ function UserCard({
 
 // Usage
 <UserCard
-  name="Sarah"
-  age={28}
+  name="Guri"
+  age={22}
   isActive={true}
   hobbies={["reading", "coding", "gaming"]}
   address={{ city: "NYC", zip: "10001" }}
