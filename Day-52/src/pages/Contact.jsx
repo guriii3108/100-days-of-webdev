@@ -5,13 +5,13 @@ const Contact = () => {
     <div className='min-h-screen w-full flex items-center justify-center px-6 py-20'>
       <div className='max-w-2xl w-full'>
         <div className='text-center mb-16'>
-          <h1 className='text-7xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-6'>
+          <h1 className='text-7xl md:text-8xl font-bold bg-linear-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-6'>
             Get In Touch
           </h1>
           <p className='text-xl text-gray-300'>We'd love to hear from you</p>
         </div>
         
-        <div className='bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12'>
+        <div className='bg-linear-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12'>
           <form className='space-y-6'>
             <div>
               <label className='block text-white font-medium mb-2'>Name</label>
@@ -42,7 +42,7 @@ const Contact = () => {
             
             <button 
               type='submit'
-              className='w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105'
+              className='w-full bg-linear-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105'
             >
               Send Message
             </button>

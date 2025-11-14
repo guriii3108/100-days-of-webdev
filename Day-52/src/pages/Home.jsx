@@ -12,13 +12,13 @@ const Home = () => {
         <div className='text-center space-y-8'>
           {/* Main heading */}
           <div className='space-y-4'>
-            <h1 className='text-8xl md:text-9xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight'>
+            <h1 className='text-8xl md:text-9xl font-extrabold bg-linear-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight'>
               Welcome
             </h1>
             <div className='flex items-center justify-center gap-4'>
-              <div className='h-px w-24 bg-gradient-to-r from-transparent via-purple-500 to-transparent'></div>
+              <div className='h-px w-24 bg-linear-to-r from-transparent via-purple-500 to-transparent'></div>
               <div className='w-2 h-2 rounded-full bg-pink-400'></div>
-              <div className='h-px w-24 bg-gradient-to-r from-transparent via-pink-500 to-transparent'></div>
+              <div className='h-px w-24 bg-linear-to-r from-transparent via-pink-500 to-transparent'></div>
             </div>
             <h2 className='text-5xl md:text-6xl font-light text-gray-300'>
               Home
@@ -32,7 +32,7 @@ const Home = () => {
           
           {/* Decorative line */}
           <div className='mt-16 flex justify-center'>
-            <div className='w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 rounded-full'></div>
+            <div className='w-32 h-1 bg-linear-to-r from-purple-500 via-pink-500 to-purple-500 rounded-full'></div>
           </div>
         </div>
       </div>

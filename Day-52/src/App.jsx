@@ -8,7 +8,7 @@ import Product from './pages/Product'
 
 const App = () => {
   return (
-    <div className='min-h-screen w-full text-white bg-gradient-to-br from-gray-900 via-black to-gray-900'> 
+    <div className='min-h-screen w-full text-white bg-linear-to-br from-gray-900 via-black to-gray-900'> 
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />}/>
