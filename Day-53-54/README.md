@@ -213,9 +213,6 @@ The app looks professional, works smoothly, and I'm proud to add it to my portfo
 
 **Progress: 54/100 Days** - Over halfway there! 💪
 
-
-
-
 ---
 ## 🤝 Contributing
 This is a personal learning project, but feel free to fork it and make it your own!
