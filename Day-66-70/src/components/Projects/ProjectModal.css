@@ -1,0 +1,168 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .project-modal {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--background);
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-modal:hover {
+    background-color: var(--accent);
+    color: white;
+  }
+  
+  .modal-image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .modal-content {
+    padding: 30px;
+  }
+  
+  .modal-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+  }
+  
+  .modal-category {
+    margin-bottom: 20px;
+  }
+  
+  .category-tag {
+    padding: 5px 15px;
+    background-color: var(--accent);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .modal-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .tech-stack {
+    margin-bottom: 30px;
+  }
+  
+  .tech-stack h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .modal-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .modal-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .github-btn {
+    background-color: var(--background);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  
+  .github-btn:hover {
+    background-color: var(--text-primary);
+    color: var(--background);
+  }
+  
+  .live-btn {
+    background-color: var(--accent);
+    color: white;
+  }
+  
+  .live-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .project-modal {
+      max-height: 85vh;
+    }
+    
+    .modal-image-container {
+      height: 200px;
+    }
+    
+    .modal-title {
+      font-size: 1.5rem;
+    }
+    
+    .modal-content {
+      padding: 20px;
+    }
+    
+    .modal-links {
+      flex-direction: column;
+    }
+  }

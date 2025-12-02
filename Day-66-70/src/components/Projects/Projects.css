@@ -1,0 +1,80 @@
+.projects-section {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+  }
+  
+  .section-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .filter-btn {
+    padding: 8px 20px;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  
+  .filter-btn.active {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-header h2 {
+      font-size: 2rem;
+    }
+    
+    .filter-buttons {
+      gap: 10px;
+    }
+    
+    .filter-btn {
+      padding: 6px 15px;
+      font-size: 0.8rem;
+    }
+  }
