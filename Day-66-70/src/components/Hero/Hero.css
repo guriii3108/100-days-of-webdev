@@ -1,0 +1,130 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+  }
+  
+  .highlight {
+    color: var(--accent);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-btn {
+    background-color: var(--accent);
+    color: white;
+  }
+  
+  .secondary-btn {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--border);
+  }
+  
+  /* Hero image styling */
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+  }
+  
+  .profile-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: var(--card-shadow);
+    object-fit: cover;
+  }
+  
+  /* For circular profile image, use this instead: */
+  /*
+  .profile-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--card-shadow);
+  }
+  */
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 80px;
+    }
+    
+    .hero-content {
+      margin-bottom: 3rem;
+    }
+    
+    .hero-buttons {
+      justify-content: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+    
+    .hero h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.3rem;
+    }
+    
+    .hero h2 {
+      font-size: 1.7rem;
+    }
+    
+    .profile-image {
+      max-width: 300px;
+    }
+  }
