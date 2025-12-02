@@ -1,0 +1,31 @@
+.cursor-dot {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .cursor-ring {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.3;
+    z-index: 9998;
+  }
+  
+  @media (max-width: 768px) {
+    .cursor-dot, .cursor-ring {
+      display: none;
+    }
+  }
