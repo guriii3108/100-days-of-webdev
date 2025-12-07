@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Profile</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <div class="min-h-screen w-full bg-zinc-900 flex items-start justify-center p-4 py-6 text-white">
+    <div class="w-full max-w-2xl">
+      <form method="post" action="/register" class="space-y-5">
+        
+        <!-- Profile Header -->
+        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-zinc-700">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-2xl font-bold">
+              <span class="opacity-80">👤</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-semibold">Create Your Profile</h2>
+              <p class="text-sm text-zinc-400">Fill in your information to get started</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Information Section -->
+        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-zinc-700">
+          <h3 class="text-lg font-semibold mb-4 pb-3 border-b border-zinc-700">Personal Information</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">Username</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="text" name="userName" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">Email</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="email" name="email" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">First Name</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="text" name="firstName" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">Last Name</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="text" name="lastName" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">Gender</label>
+              <select
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                name="gender">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">Date of Birth</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="date" name="dateOfBirth" />
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">Phone</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="tel" placeholder="10 digits" name="phone" pattern="[0-9]{10}" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Address Information Section -->
+        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-zinc-700">
+          <h3 class="text-lg font-semibold mb-4 pb-3 border-b border-zinc-700">Address</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">Street</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="text" name="street" />
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-zinc-300 mb-1.5">City</label>
+                <input
+                  class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  type="text" name="city" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-zinc-300 mb-1.5">State</label>
+                <input
+                  class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  type="text" name="state" />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-zinc-300 mb-1.5">Country</label>
+                <input
+                  class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  type="text" name="country" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-zinc-300 mb-1.5">Pincode</label>
+                <input
+                  class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  type="text" name="pincode" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links Section -->
+        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-zinc-700">
+          <h3 class="text-lg font-semibold mb-4 pb-3 border-b border-zinc-700">Social Links</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">Instagram</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="url" placeholder="https://instagram.com/..." name="instagram" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">Twitter</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="url" placeholder="https://twitter.com/..." name="twitter" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">GitHub</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="url" placeholder="https://github.com/..." name="github" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-300 mb-1.5">LinkedIn</label>
+              <input
+                class="w-full px-4 py-2.5 bg-zinc-900/60 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                type="url" placeholder="https://linkedin.com/in/..." name="linkedin" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-end gap-3">
+          <button type="submit" class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all rounded-lg font-medium shadow-lg hover:shadow-xl">
+            Create Profile
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
