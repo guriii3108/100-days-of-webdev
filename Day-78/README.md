@@ -1,5 +1,6 @@
 Day 78 – Login + Logout Flow (bcrypt.compare + JWT)
 
+
 ## Overview
 Secure auth flow with password verification via `bcrypt.compare`, JWT issuance for sessions, cookie-based storage, and logout that clears the token. Routes are protected with middleware that validates JWTs.
 
