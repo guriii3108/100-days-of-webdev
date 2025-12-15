@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed - All Posts</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="bg-[#0a0a0a]">
+    <div class="min-h-screen w-full py-8 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <!-- Header Section -->
+        <div class="mb-8">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+            <div>
+              <h1 class="text-4xl sm:text-5xl font-bold mb-2 text-white flex items-center gap-3">
+                <i class="fas fa-stream text-gray-400"></i>
+                <span>Community Feed</span>
+              </h1>
+              <p class="text-gray-400 text-sm">Discover posts from everyone</p>
+            </div>
+            <div class="flex gap-3">
+              <a
+                href="/profile"
+                class="px-5 py-2.5 bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl text-white font-medium transition-all duration-300 flex items-center gap-2 text-sm hover:scale-105"
+              >
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+              </a>
+              <a
+                class="px-5 py-2.5 bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl text-white font-medium transition-all duration-300 flex items-center gap-2 text-sm hover:scale-105"
+                href="/logout"
+              >
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Posts Section -->
+        <div class="space-y-5">
+          <%if(!posts || posts.length === 0){%>
+          <div class="w-full text-center py-20 bg-gradient-to-br from-[#1a1a1a] to-[#151515] rounded-2xl border border-white/5">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-white/5 flex items-center justify-center">
+              <i class="fas fa-inbox text-4xl text-gray-500"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-300 mb-2">
+              No Posts Yet
+            </h3>
+            <p class="text-gray-500 mb-8 text-sm">
+              Be the first to share something with the community!
+            </p>
+            <a
+              href="/profile"
+              class="inline-block px-8 py-3 bg-white text-[#0a0a0a] hover:bg-gray-100 font-semibold rounded-xl transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              <i class="fas fa-plus mr-2"></i>Create Your First Post
+            </a>
+          </div>
+          <% }else{ %> 
+          <%posts.reverse().forEach((post)=>{ %>
+          <div class="group post bg-gradient-to-br from-[#1a1a1a] to-[#151515] border border-white/5 rounded-2xl p-6 hover:border-white/10 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+            <!-- Post Header -->
+            <div class="flex items-start justify-between mb-5">
+              <div class="flex items-center gap-4 flex-1 min-w-0">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
+                  <%= post.user.username.charAt(0).toUpperCase() %>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 mb-1">
+                    <h4 class="text-white font-semibold text-sm truncate">
+                      <%= post.user.username %> 
+                    </h4>
+                    <% if(post.user._id.toString() === currentUser._id.toString()) { %>
+                    <span class="text-xs bg-white/10 text-gray-300 px-2 py-0.5 rounded-full border border-white/10">
+                      You
+                    </span>
+                    <% } %>
+                  </div>
+                  <div class="flex items-center gap-2 text-gray-500 text-xs">
+                    <i class="far fa-clock"></i>
+                    <span><%= new Date(post.date).toLocaleDateString('en-US', {
+                    year: 'numeric', month: 'short', day: 'numeric', hour:
+                    '2-digit', minute: '2-digit' }) %></span>
+                  </div>
+                </div>
+              </div>
+              <% if(post.user._id.toString() === currentUser._id.toString()) { %>
+              <div class="flex gap-2 ml-4">
+                <a
+                  href="/edit/<%=post._id%>?from=feed"
+                  class="px-3.5 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white rounded-lg font-medium transition-all duration-300 flex items-center gap-1.5 text-xs hover:scale-105"
+                >
+                  <i class="fas fa-edit"></i>
+                  <span>Edit</span>
+                </a>
+              </div>
+              <% } %>
+            </div>
+
+            <!-- Post Content -->
+            <p class="text-gray-300 mb-5 leading-relaxed break-words text-sm">
+              <%= post.content%>
+            </p>
+
+            <!-- Post Actions -->
+            <div class="flex items-center justify-between pt-5 border-t border-white/5">
+              <div class="flex items-center gap-2 text-gray-400 text-xs">
+                <i class="fas fa-heart text-red-400"></i>
+                <span class="font-semibold text-white"><%= post.likes.length%></span>
+                <span class="text-gray-500">
+                  <%= post.likes.length === 1 ? 'like' : 'likes' %>
+                </span>
+              </div>
+
+              <a
+                class="px-4 py-2.5 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 text-xs bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white hover:scale-105 <%= (post.likes.map(id => id.toString()).indexOf(currentUser._id.toString()) === -1 ? '' : 'bg-red-500/10 border-red-500/20 text-red-400 hover:text-red-300') %>"
+                href="/like/<%= post._id%>?from=feed"
+              >
+                <i
+                  class="fas <%= (post.likes.map(id => id.toString()).indexOf(currentUser._id.toString()) === -1 ? 'fa-heart' : 'fa-heart-broken') %>"
+                ></i>
+                <span
+                  ><%= (post.likes.map(id =>
+                  id.toString()).indexOf(currentUser._id.toString()) === -1 ?
+                  "Like" : "Unlike" ) %></span
+                >
+              </a>
+            </div>
+          </div>
+          <%})}%>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="mt-10 text-center">
+          <button
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="px-6 py-3 bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl text-white font-medium transition-all duration-300 flex items-center gap-2 mx-auto hover:scale-105"
+          >
+            <i class="fas fa-arrow-up"></i>
+            <span>Back to Top</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2a2a2a;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3a3a3a;
+      }
+    </style>
+  </body>
+</html>
