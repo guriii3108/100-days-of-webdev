@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Post</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-[#0a0a0a]">
+  <div class="min-h-screen w-full flex items-center justify-center p-6 text-white">
+    <div class="w-full max-w-2xl h-[90vh] overflow-y-auto">
+      <div class="bg-[#1a1a1a] rounded-2xl p-8 shadow-2xl border border-[#2a2a2a]">
+        <!-- Header -->
+        <div class="flex justify-between items-start mb-8 pb-6 border-b border-[#2a2a2a]">
+          <div>
+            <h2 class="text-3xl font-semibold mb-1 text-white">
+              Hello, <%= post.user.name%> 😃
+            </h2>
+            <p class="text-gray-500 text-sm flex items-center gap-2">
+              <i class="fas fa-edit text-gray-600"></i>
+              Edit your post
+            </p>
+          </div>
+          <div class="flex gap-2">
+            <a href="<%= from === 'feed' ? '/feed' : '/profile' %>" 
+              class="px-4 py-2 bg-[#2a2a2a] hover:bg-[#3a3a3a] text-white font-medium rounded-lg transition-all duration-200 flex items-center gap-2 text-sm border border-[#2a2a2a]">
+              <i class="fas fa-arrow-left text-xs"></i>
+              <span>Back</span>
+            </a>
+            <a class="px-4 py-2 bg-[#2a2a2a] hover:bg-[#3a3a3a] text-white font-medium rounded-lg transition-all duration-200 flex items-center gap-2 text-sm border border-[#2a2a2a]"
+              href="/logout">
+              <i class="fas fa-sign-out-alt text-xs"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Edit Form -->
+        <div class="bg-[#0a0a0a] rounded-xl p-6 border border-[#2a2a2a]">
+          <form action="/update/<%=post._id%>" method="post" class="space-y-4">
+            <% if(from) { %>
+            <input type="hidden" name="from" value="<%= from %>">
+            <% } %>
+            <div class="space-y-2">
+              <label class="text-sm text-gray-400 font-medium flex items-center gap-2">
+                <i class="fas fa-pen text-gray-500 text-xs"></i>
+                Post Content
+              </label>
+              <textarea 
+                placeholder="What's on your mind? Share your thoughts..." 
+                name="newcontent"
+                rows="8"
+                class="w-full p-4 outline-none resize-none bg-[#0a0a0a] border border-[#2a2a2a] rounded-lg focus:border-[#3a3a3a] focus:ring-1 focus:ring-[#3a3a3a] transition-all duration-200 placeholder:text-gray-600 text-white text-sm"
+                required
+              ><%=post.content%></textarea>
+            </div>
+            
+            <div class="flex gap-3">
+              <button type="submit"
+                class="flex-1 py-3 bg-white text-[#0a0a0a] hover:bg-gray-100 font-medium rounded-lg transition-all duration-200 flex items-center justify-center gap-2 text-sm">
+                <i class="fas fa-save text-xs"></i>
+                <span>Update Post</span>
+              </button>
+              <a href="<%= from === 'feed' ? '/feed' : '/profile' %>"
+                class="px-6 py-3 bg-[#2a2a2a] hover:bg-[#3a3a3a] text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center gap-2 border border-[#2a2a2a] text-sm">
+                <i class="fas fa-times text-xs"></i>
+                <span>Cancel</span>
+              </a>
+            </div>
+          </form>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="mt-6 bg-[#0a0a0a] rounded-xl p-6 border border-[#2a2a2a]">
+          <h3 class="text-lg font-medium mb-4 flex items-center gap-2 text-gray-300">
+            <i class="fas fa-eye text-gray-500 text-sm"></i>
+            Preview
+          </h3>
+          <div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#2a2a2a]">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 bg-[#2a2a2a] rounded-full flex items-center justify-center text-white font-medium text-sm">
+                <%= post.user.username.charAt(0).toUpperCase() %>
+              </div>
+              <div>
+                <h4 class="text-gray-300 font-medium text-sm">
+                  @<%= post.user.username %>
+                </h4>
+              </div>
+            </div>
+            <p class="text-gray-300 leading-relaxed text-sm" id="preview-content">
+              <%=post.content%>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Custom scrollbar */
+    .overflow-y-auto::-webkit-scrollbar {
+      width: 6px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-track {
+      background: #1a1a1a;
+      border-radius: 10px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-thumb {
+      background: #2a2a2a;
+      border-radius: 10px;
+    }
+    .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+      background: #3a3a3a;
+    }
+  </style>
+
+  <script>
+    // Live preview update
+    document.querySelector('textarea[name="newcontent"]').addEventListener('input', function(e) {
+      document.getElementById('preview-content').textContent = e.target.value;
+    });
+  </script>
+</body>
+
+</html>
