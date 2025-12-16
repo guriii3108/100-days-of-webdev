@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>File Upload</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body
+        class="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center px-4"
+    >
+        <div
+            class="relative w-full max-w-md rounded-2xl border border-slate-800/80 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 px-6 py-7 shadow-2xl shadow-black/60 overflow-hidden"
+        >
+            <div
+                class="pointer-events-none absolute -top-24 right-[-40%] h-56 w-56 rounded-full bg-indigo-500/10 blur-3xl"
+            ></div>
+            <div
+                class="pointer-events-none absolute -bottom-24 left-[-30%] h-56 w-56 rounded-full bg-sky-500/5 blur-3xl"
+            ></div>
+
+            <header class="mb-6 space-y-1">
+                <h1 class="text-xl font-semibold tracking-tight text-slate-50">
+                    Upload file
+                </h1>
+                <p class="text-sm text-slate-400">
+                    Send a file from your device to the server.
+                </p>
+            </header>
+
+            <form
+                action="/upload"
+                method="POST"
+                enctype="multipart/form-data"
+                class="space-y-5"
+            >
+                <div class="space-y-2">
+                    <label
+                        for="file"
+                        class="block text-xs font-medium text-slate-300"
+                        >File</label
+                    >
+
+                    <label
+                        class="group relative flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-slate-700/80 bg-slate-900/70 px-4 py-4 text-left transition hover:border-indigo-500/70 hover:bg-slate-900"
+                    >
+                        <div
+                            class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-slate-800 to-slate-900 text-base text-slate-100 shadow-lg shadow-slate-900/80 ring-1 ring-slate-700/80"
+                        >
+                            ⬆
+                        </div>
+                        <div class="flex flex-col">
+                            <span
+                                class="text-[13px] font-medium text-slate-100 group-hover:text-slate-50"
+                                >Click to choose or drop a file</span
+                            >
+                            <span class="mt-0.5 text-[11px] text-slate-500">
+                                Any file type is accepted.
+                            </span>
+                        </div>
+                        <input
+                            id="file"
+                            type="file"
+                            name="myfile"
+                            required
+                            class="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+                        />
+                    </label>
+                </div>
+
+                <button
+                    type="submit"
+                    class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-slate-100 to-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-lg shadow-slate-900/70 transition hover:from-slate-50 hover:to-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                >
+                    Upload
+                </button>
+
+                <p class="text-[10px] text-center text-slate-500">
+                    Server listening on
+                    <span class="font-mono text-slate-300"
+                        >http://localhost:3000</span
+                    >
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
