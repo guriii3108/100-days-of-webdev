@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Send Mail</title>
+        <!-- Tailwind via CDN for this small demo page -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: [
+                                "system-ui",
+                                "-apple-system",
+                                "BlinkMacSystemFont",
+                                "Inter",
+                                "sans-serif",
+                            ],
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body
+        class="min-h-screen bg-slate-50 text-slate-900 antialiased flex items-center justify-center px-4"
+    >
+        <div class="w-full max-w-lg">
+            <div
+                class="bg-white border border-slate-200/80 rounded-2xl shadow-sm px-6 py-6 sm:px-7 sm:py-7"
+            >
+                <div class="mb-5 space-y-1.5">
+                    <p
+                        class="text-[11px] tracking-[0.16em] uppercase text-slate-400"
+                    >
+                        Mail
+                    </p>
+                    <h1
+                        class="text-lg sm:text-xl font-medium tracking-tight text-slate-900"
+                    >
+                        Send a quick email
+                    </h1>
+                    <p class="text-[13px] text-slate-500 max-w-md">
+                        Keep it short and clear. We’ll send it to the address
+                        you provide below.
+                    </p>
+                </div>
+
+                <form
+                    action="/mail"
+                    method="post"
+                    autocomplete="off"
+                    class="space-y-4"
+                >
+                    <div class="space-y-1.5">
+                        <label
+                            for="email"
+                            class="block text-xs font-medium text-slate-600"
+                            >To</label
+                        >
+                        <input
+                            id="email"
+                            type="email"
+                            name="email"
+                            placeholder="name@domain.com"
+                            required
+                            class="block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 shadow-[inset_0_0_0_0_rgba(0,0,0,0)] outline-none focus-visible:border-slate-900 focus-visible:ring-1 focus-visible:ring-slate-900/70 transition"
+                        />
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label
+                            for="subject"
+                            class="block text-xs font-medium text-slate-600"
+                            >Subject</label
+                        >
+                        <input
+                            id="subject"
+                            type="text"
+                            name="subject"
+                            placeholder="What is this about?"
+                            maxlength="120"
+                            required
+                            class="block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 outline-none focus-visible:border-slate-900 focus-visible:ring-1 focus-visible:ring-slate-900/70 transition"
+                        />
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label
+                            for="text"
+                            class="block text-xs font-medium text-slate-600"
+                            >Message</label
+                        >
+                        <textarea
+                            id="text"
+                            name="text"
+                            placeholder="Write your message…"
+                            required
+                            rows="5"
+                            class="block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 outline-none focus-visible:border-slate-900 focus-visible:ring-1 focus-visible:ring-slate-900/70 transition resize-y"
+                        ></textarea>
+                    </div>
+
+                    <div
+                        class="pt-1.5 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3"
+                    >
+                        <p class="text-[11px] text-slate-400">
+                            Your message will be sent immediately.
+                        </p>
+                        <button
+                            type="submit"
+                            class="inline-flex items-center justify-center rounded-full bg-slate-900 px-4 py-2 text-[12px] font-medium tracking-[0.14em] uppercase text-white shadow-sm hover:bg-black/90 transition"
+                        >
+                            Send mail
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
