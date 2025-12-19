@@ -1,0 +1,18 @@
+{
+  "name": "day-87",
+  "version": "1.0.0",
+  "description": "A practice session focused on understanding **Socket.io** and **WebSockets** – learning how real-time bidirectional communication works between clients and servers, and exploring the core concepts, APIs, and patterns used in building real-time applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "socket.io": "^4.8.1"
+  }
+}
