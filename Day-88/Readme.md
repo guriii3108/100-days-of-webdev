@@ -47,3 +47,26 @@ The frontend utilizes modern React patterns:
 - **Backend**: Node.js, Express.js, Socket.io, Cookie-Parser.
 - **Database**: MongoDB (Mongoose).
 - **Authentication**: JSON Web Tokens (JWT).
+
+## 📅 Progress Log
+
+### Day 1: Foundation & Authentication
+- **Backend**:
+  - Set up Express server and MongoDB connection.
+  - Implemented User Authentication (Signup/Login/Logout).
+  - Created Database Models (User, Message, Conversation).
+  - Secured routes with JWT middleware.
+- **Frontend**:
+  - Initialized project with Vite and Tailwind.
+  - Built the main Chat UI (Sidebar, Chat Area).
+  - Integrated Authentication forms and Context API.
+  - Connected Frontend Auth with Backend APIs.
+
+## 🚀 Getting Started
+
+1. **Clone the repo**
+2. **Backend Setup**:
+   ```bash
+   cd Backend
+   npm install
+   npm start
