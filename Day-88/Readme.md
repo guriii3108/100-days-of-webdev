@@ -15,3 +15,35 @@ A robust real-time messaging application built with the MERN stack (MongoDB, Exp
 - **Scalable Backend**:
   - Modular controller-service architecture.
   - MongoDB with Mongoose for data modeling.
+
+## 🏗 Architecture Overview
+
+### 🔙 Backend
+The backend is structured to separate concerns for better maintainability:
+
+- **Controllers**: Handle business logic.
+  - `user.controller.js`: User auth (Login, Signup, Logout).
+  - `message.controller.js`: Message handling.
+- **Models**: Database schemas.
+  - `User`: User profile and credentials.
+  - `Conversation`: Manages chat threads.
+  - `Message`: Individual message data.
+- **Routes**: API endpoints definitions (`/user`, `/message`).
+- **Security**: Middleware for JWT verification (`VerifyJwtToken.js`).
+
+### 🔜 Frontend
+The frontend utilizes modern React patterns:
+
+- **State Management**: React Context API (`AuthProvider.jsx`) for global auth state.
+- **Components**:
+  - `ChatWindow`: Handles message display and input.
+  - `Sidebar`: User list and search functionality.
+  - `Auth`: Login and Signup forms.
+- **Routing**: Protected routes ensuring secure access.
+
+## 🛠 Tech Stack
+
+- **Frontend**: React (Vite), Tailwind CSS, Axios, React Router.
+- **Backend**: Node.js, Express.js, Socket.io, Cookie-Parser.
+- **Database**: MongoDB (Mongoose).
+- **Authentication**: JSON Web Tokens (JWT).
