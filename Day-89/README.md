@@ -53,3 +53,35 @@ This document outlines the progress made on the Real-Time Chat Application, focu
     -   End-to-end flow validated and operational
 
 ---
+
+## ⚠️ Known Limitations
+
+### Current State
+
+-   **Message Refresh Requirement**: Users must manually refresh the page to view newly received messages
+-   **Reason**: Real-time WebSocket integration (Socket.io) not yet implemented
+-   **Impact**: Functional but not optimal user experience
+-   **Status**: Expected limitation, addressed in next development phase
+
+---
+
+## 🔄 Technical Architecture
+
+### Frontend State Management
+
+-   **Context API**: Authentication state management (`AuthProvider.jsx`)
+-   **Custom Hooks**:
+    -   `useConversation`: Manages selected conversation and messages state
+    -   `useSendMessage`: Handles message sending logic
+    -   `useGetMessage`: Fetches messages for selected conversation
+-   **API Integration**: Axios with credentials for authenticated requests
+
+### Backend Integration
+
+-   **Endpoints Utilized**:
+    -   `POST /message/sendmessage`: Message creation
+    -   `GET /message/getmessage/:conversationId`: Message retrieval
+-   **Authentication**: JWT token validation via HttpOnly cookies
+-   **Database**: MongoDB with Mongoose ODM
+
+---
