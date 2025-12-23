@@ -26,3 +26,15 @@ We've pushed a significant update focused on user experience, real-time interact
 - **Optimized Layout**: Complete overhaul of the layout for mobile devices.
 - **Responsive Sidebar**: Smart hiding/showing of the sidebar based on screen size.
 - **Adaptive Components**: Chat windows, input fields, and message bubbles resize gracefully for any device width.
+
+## 🎨 UI/UX Improvements
+- **Modern Aesthetics**: Polished active states, hover effects, and smooth transitions.
+- **Clean Interface**: visual clutter reduced with better spacing and typography.
+- **Theme Consistency**: Unified color palette across all components.
+
+## 🛠 Tech Highlights
+- **Socket.IO**: Optimized event handling for instant message delivery and status updates.
+- **React Context**: Refined state management for seamless conversation switching.
+- **Responsive Handling**: Custom hooks to manage mobile vs. interaction states.
+
+---
