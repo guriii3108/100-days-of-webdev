@@ -67,3 +67,15 @@ This project was built step-by-step over 5 days, focusing on a specific core arc
 - **Documentation**: Comprehensive documentation for GitHub release.
 
 ---
+
+## 🛠 Tech Stack
+
+| Domain | Technolgies |
+|--------|-------------|
+| **Frontend** | React (Vite), Tailwind CSS, Context API, Axios, React Router |
+| **Backend** | Node.js, Express.js, Socket.io, Cookie-Parser |
+| **Database** | MongoDB, Mongoose |
+| **Auth** | JSON Web Token (JWT), Bcrypt.js |
+| **Tools** | Postman, Git, |
+
+---
