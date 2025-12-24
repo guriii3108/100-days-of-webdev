@@ -79,3 +79,57 @@ This project was built step-by-step over 5 days, focusing on a specific core arc
 | **Tools** | Postman, Git, |
 
 ---
+
+## 🚀 Getting Started
+
+Follow these steps to deploy or run the project locally.
+
+### Prerequisites
+- Node.js (v14+)
+- MongoDB (Local or Atlas URL)
+
+### 1. Clone & Install
+```bash
+git clone "git url"
+cd chat-app-socketio
+```
+
+### 2. Backend Setup
+```bash
+cd Backend
+npm install
+
+# Create .env file
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+NODE_ENV=development
+
+npm start
+```
+
+### 3. Frontend Setup
+```bash
+cd Frontend
+npm install
+npm run dev
+```
+
+### 4. Build for Production
+```bash
+cd Frontend
+npm run build
+```
+
+---
+
+## 🔮 Future Roadmap
+
+- [ ] Group Chats
+- [ ] File/Image Sharing
+- [ ] End-to-End Encryption
+- [ ] Voice/Video Calls
+
+---
+
+**Developed with ❤️ by Gurveer Singh**
