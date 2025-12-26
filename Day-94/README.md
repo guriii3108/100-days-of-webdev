@@ -27,3 +27,34 @@ Today’s focus: revisited the entire project’s file structure, cleaned up fol
 - Checked model names and validation rules
 - Removed unused endpoints
 - Improved error messages sent to frontend
+
+### Example Backend Structure
+```
+/backend
+  /routes
+  /controllers
+  /models
+  /middleware
+  /config
+  server.js
+```
+
+## Frontend Cleanup Tasks
+- Organized pages inside `/pages`
+- Moved reusable UI parts to `/components`
+- Centralized API calls in a separate file
+- Cleaned up `useEffect`, removed unnecessary states
+- Improved naming conventions (`Login.jsx`, `Dashboard.jsx`, etc.)
+- Fixed minor CSS issues
+- Reviewed route navigation flow (React Router)
+
+### Example Frontend Structure
+```
+/src
+  /components
+  /pages
+  /context
+  /hooks
+  /api
+  App.jsx
+```
