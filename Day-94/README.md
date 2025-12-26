@@ -1,4 +1,4 @@
-# Day 94 – Code Structure Revision + Cleanup (Preparing for Capstone)
+# Day 94 – Code Structure Revision + Cleanup
 
 ## Overview
 Today’s focus: revisited the entire project’s file structure, cleaned up folders, optimized naming conventions, removed unused code, and made the backend and frontend more organized. This step is important before starting the capstone.
@@ -58,3 +58,23 @@ Today’s focus: revisited the entire project’s file structure, cleaned up fol
   /api
   App.jsx
 ```
+
+## What I Improved Today
+- Code readability
+- File structure consistency
+- Removed unused code
+- Better separation between logic and UI
+- Simplified API calls
+- Cleaner project ready for scaling
+
+## Challenges
+- Deciding what to refactor vs what to keep
+- Balancing “clean code” with “working code”
+- Managing duplicate functions across files
+- Keeping both frontend and backend consistent
+
+## Tomorrow’s Plan (Day 95)
+- Final pre-capstone checks
+- Build reusable components (forms, inputs, buttons)
+- Finalize API helpers and error handlers
+- Prepare workspace for starting the final capstone project
