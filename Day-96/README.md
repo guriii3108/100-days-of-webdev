@@ -1,4 +1,4 @@
-# Day 96 – 📅 Daily Progress Report - December 28, 2024
+# Day 96 – 📅 Daily Progress Report - December 28, 2025
 
 **Live Demo**: [https://pixlyyy.vercel.app/](https://pixlyyy.vercel.app/)
 
