@@ -35,10 +35,13 @@ I also worked on a **mini-project** to apply grid-based design in practice.
 
 ---
 
-## 📂 Files in this folder
-- `index.html` → Dashboard structure
-- `style.css` → Grid + responsive styling
-
+## 📂 Project Structure
+```
+Day-08/
+├── index.html       → Dashboard structure
+├── style.css        → Grid + responsive styling
+└── README.md        → Project overview & notes
+```
 ---
 
 ## 💡 Key Learnings
