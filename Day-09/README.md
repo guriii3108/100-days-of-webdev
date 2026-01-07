@@ -36,10 +36,13 @@ I also built a **mini project**: a Responsive Landing Page that adapts for **mob
 
 ---
 
-## 📂 Files in this folder
-- `index.html` → Landing Page structure  
-- `style.css` → Responsive styling with media queries  
-
+## 📂 Project Structure
+```
+Day-09/
+├── index.html       → Landing Page structure 
+├── style.css        → Responsive styling with media queries  
+└── README.md        → Project overview & notes
+```
 ---
 
 ## 💡 Key Learnings
