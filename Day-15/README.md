@@ -42,3 +42,4 @@ A polished, single‑page landing experience for a fictional music label, "BEAT 
 - Animate section entrances (Intersection Observer + subtle transforms).
 
 
+
