@@ -86,6 +86,20 @@ This repository contains my daily progress, code, and notes as I learn and build
 | 73    | Express Advanced Routing (CRUD)                   | [Code](./Day-73)       |
 | 74    | MongoDB Basics                                    | [Code](./Day-74)       |
 | 75    | Mongoose & EJS                                    | [Code](./Day-75)       |
+| 76    | Database Relationships (Embed vs Reference)       | [Code](./Day-76)       |
+| 77    | Auth Basics (Hashing + Signup)                    | [Code](./Day-77)       |
+| 78    | Login & Logout Flow (JWT + Cookies)               | [Code](./Day-78)       |
+| 79    | Auth Middleware & Protection                      | [Code](./Day-79)       |
+| 80    | Error Handling & Data Validation (Joi)            | [Code](./Day-80)       |
+| 81-82 | Social Feed App (Mini Project)                    | [Code](./Day-81-82)    |
+| 83    | Revision / Practice                               | [Code](./Day-83)       |
+| 84    | File Uploads (Multer)                             | [Code](./Day-84)       |
+| 85    | Sending Emails (Nodemailer)                       | [Code](./Day-85)       |
+| 86    | Fullstack Setup & CORS                            | [Code](./Day-86)       |
+| 87    | Socket.io & WebSockets Basics                     | [Code](./Day-87)       |
+| 88    | MERN Chat App: Setup & Auth                       | [Code](./Day-88)       |
+| 89    | MERN Chat App: UI & Message Integration           | [Code](./Day-89)       |
+| 90    | MERN Chat App: Real-time Features                 | [Code](./Day-90)       |
 
 ---
 
