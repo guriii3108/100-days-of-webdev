@@ -115,11 +115,10 @@ This repository contains my daily progress, code, and notes as I learn and build
 
 ## 🛠️ Tech Stack
 
--   HTML, CSS
--   JavaScript (ES6+)
--   React.js
--   Node.js & Express
--   MongoDB / MySQL
+-   **Frontend:** HTML, CSS, Tailwind CSS, JavaScript (ES6+), React.js, Redux Toolkit, Three.js
+-   **Backend:** Node.js, Express.js, Socket.io
+-   **Database:** MongoDB (Mongoose), MySQL
+-   **Auth:** JWT, Cookies, Bcrypt
 
 ---
 
@@ -130,4 +129,4 @@ This repository contains my daily progress, code, and notes as I learn and build
 
 ---
 
-👉 This README will evolve as the journey continues 🚀
+👉 **Mission Accomplished!** The #100DaysOfWebDev challenge is complete. 🚀
